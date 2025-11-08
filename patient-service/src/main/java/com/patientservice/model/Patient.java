@@ -7,6 +7,7 @@ import lombok.Getter;
 import lombok.Setter;
 
 import java.time.LocalDate;
+import java.util.UUID;
 
 @Entity
 @Getter
@@ -14,7 +15,7 @@ import java.time.LocalDate;
 public class Patient {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
-    private int id;
+    private UUID id;
 
     @NotNull
     private String name;
