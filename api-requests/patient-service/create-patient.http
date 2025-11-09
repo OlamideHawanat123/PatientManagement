@@ -1,0 +1,13 @@
+### POST request create Patient
+POST localhost:4000/patients
+Content-Type: application/json
+
+{
+"address": "3, Santiago road, Bernabue",
+  "dateOfBirth": "1967-09-10",
+  "email": "",
+  "name": "Olamide",
+  "registeredDate": "1978-06-12"
+}
+
+###
