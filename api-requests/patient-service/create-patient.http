@@ -5,8 +5,8 @@ Content-Type: application/json
 {
 "address": "3, Santiago road, Bernabue",
   "dateOfBirth": "1967-09-10",
-  "email": "ola@gmsil.com",
-  "name": "",
+  "email": "ola@gmail.com",
+  "name": "olamide",
   "registeredDate": "1978-06-12"
 }
 
