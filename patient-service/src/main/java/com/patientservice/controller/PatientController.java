@@ -5,7 +5,9 @@ import com.patientservice.dto.PatientResponseDto;
 import com.patientservice.repository.PatientRepository;
 import com.patientservice.service.PatientService;
 import jakarta.validation.Valid;
+import lombok.Builder;
 import org.springframework.http.ResponseEntity;
+import org.springframework.validation.annotation.Validated;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -34,7 +36,7 @@ public class PatientController {
     }
 
     @PutMapping("/{id}")
-    public ResponseEntity<?> updatePatient(@PathVariable UUID id, @RequestBody PatientRequestDto patientRequestDto){
+    public ResponseEntity<?> updatePatient(@PathVariable UUID id, @Validated(Builder.Default.class) @RequestBody PatientRequestDto patientRequestDto){
         PatientResponseDto patientResponseDto = patientService.updatePatient(id, patientRequestDto);
         return ResponseEntity.ok().body(patientResponseDto);
     }
